@@ -1,8 +1,19 @@
+import 'bootstrap/dist/css/bootstrap-grid.min.css'
 import './App.css'
+
+const initialState = {
+  fromLanguage: 'auto',
+  toLanguage: 'en',
+  fromText: '',
+  result: '',
+  loading: false
+}
 
 function App () {
   return (
-    <div>app</div>
+    <div className='App'>
+      <h1>Google Translate </h1>
+    </div>
   )
 }
 
