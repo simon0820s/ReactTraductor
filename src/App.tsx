@@ -68,7 +68,7 @@ function App () {
       <h1>Google Translate </h1>
       <button onClick={() => {
         dispatch({ type: 'SET_FROM_LANGUAGE', payload: 'es' })
-      }}>Change to Spanish</button>
+      }}>Change spanish</button>
       {fromLanguage}
     </div>
   )
