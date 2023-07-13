@@ -1,4 +1,4 @@
-import 'bootstrap/dist/css/bootstrap-grid.min.css'
+import 'bootstrap/dist/css/bootstrap.css'
 import './App.css'
 import { useReducer } from 'react'
 import { type Action, type State } from './types.d'
@@ -56,10 +56,20 @@ function reducer (state: State, action: Action) {
 }
 
 function App () {
-  const [state, dispatch] = useReducer(reducer, initialState)
+  const [{
+    fromLanguage,
+    toLanguage,
+    fromText,
+    result,
+    loading
+  }, dispatch] = useReducer(reducer, initialState)
   return (
     <div className='App'>
       <h1>Google Translate </h1>
+      <button onClick={() => {
+        dispatch({ type: 'SET_FROM_LANGUAGE', payload: 'es' })
+      }}>Change to Spanish</button>
+      {fromLanguage}
     </div>
   )
 }
