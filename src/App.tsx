@@ -1,4 +1,4 @@
-import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap/dist/css/bootstrap.min.css'
 import { Container, Row, Col, Button } from 'react-bootstrap'
 import './App.css'
 import { useStore } from './hooks/useStore'
