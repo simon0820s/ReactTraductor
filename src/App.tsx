@@ -4,17 +4,17 @@ import './App.css'
 import { useStore } from './hooks/useStore'
 import { AUTO_LANGUAGE } from './constants'
 import { ArrowsIcon } from './components/icons'
+import { LanguageSelector } from './components/LanguageSelector'
 
 function App () {
-  const { fromLanguage, toLanguage, interChangeLanguages } = useStore()
+  const { fromLanguage, toLanguage, interChangeLanguages, setFromLanguage, setToLanguage } = useStore()
 
   return (
     <Container fluid>
       <h1>Google Translate </h1>
       <Row>
         <Col>
-        <h2>From</h2>
-        {fromLanguage}
+        <LanguageSelector type='from' value={fromLanguage} onChange={setFromLanguage}/>
         </Col>
         <Col>
         <Button variant='link' disabled={fromLanguage === AUTO_LANGUAGE} onClick={interChangeLanguages}>
@@ -22,8 +22,7 @@ function App () {
         </Button>
         </Col>
         <Col>
-        <h2>To</h2>
-        {toLanguage}
+        <LanguageSelector type='to' value={toLanguage} onChange={setToLanguage}/>
         </Col>
       </Row>
     </Container>
