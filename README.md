@@ -1,1 +1,1 @@
-# ReactTraductor
+# Traductor GPT
